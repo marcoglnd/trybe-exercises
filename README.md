@@ -1,0 +1,1 @@
+Esse repositório tem como objetivo arquivar todos os exercícios desenvolvidos durante o curso de Desenvolvimento Web da Trybe. Neste curso, ao longo de um ano, vamos desenvolver habilidades nas áreas de Front End, Back End e Ciência da Computação, além de soft skills que nos colocam em espera o mercado de trabalho na área de desenvolvimento web.
