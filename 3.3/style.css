@@ -1,36 +1,23 @@
-.body {
-  
+h1 {
+  text-align: center;
 }
 
-.super-mario {
-  width: 200px;
-  position: absolute;
-  z-index: 2;
+p {
+  text-align: center;
 }
 
-.goomba {
-  width: 200px;
-  position: absolute;
-  top: 350px;
+ol {
+  text-align: center;
 }
 
-.baloon {
-  width: 200px;
-  position: absolute;
-  left: 260px;
-  z-index: 3;
+li:hover {
+  background-color: cornflowerblue;
 }
 
-.bowser {
-  width: 200px;
-  position: absolute;
-  left: 450px;
-  top: 120px;
+li:active {
+  color: aliceblue;
 }
 
-.word {
-  position: absolute;
-  left: 270px;
-  top: 100px;
-  z-index: 4;
+ol, ul {
+  list-style: none;
 }
