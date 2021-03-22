@@ -34,17 +34,22 @@ li em {
   font-weight: bold;
 }
 
-ul:nth-of-type(1) :nth-child(1) {
+ul:nth-of-type(1) :nth-child(-n+3) {
   color: blue;
 }
 
-ul:nth-of-type(1) :nth-child(2) {
+li[value*="java"]{
+  background-color: pink;
+}
+
+/*ul:nth-of-type(1) :nth-child(2) {
   color: blue;
 }
 
 ul:nth-of-type(1) :nth-child(3) {
   color: blue;
-}
+} */
+
 
 a:hover[href*="stack"] {
   font-weight: 600;
