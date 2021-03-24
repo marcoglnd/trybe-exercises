@@ -11,13 +11,27 @@
 
 //Exercício 2
 
-let a = 5;
-let b = 5;
+// let a = 5;
+// let b = 5;
 
-if (a > b) {
+// if (a > b) {
+//   console.log(a, 'é o maior número');
+// } else if (a < b) {
+//   console.log(b, 'é o maior número');
+// } else {
+//   console.log(a, 'e', b, 'são iguais');
+// }
+
+//Exercício 3
+
+let a = 12;
+let b = 22;
+let c = 11;
+
+if (a >= b && a >= c) {
   console.log(a, 'é o maior número');
-} else if (a < b) {
+} else if (a <= b && b >= c) {
   console.log(b, 'é o maior número');
 } else {
-  console.log(a, 'e', b, 'são iguais');
-}
+  console.log(c, 'é o maior número');
+} 
