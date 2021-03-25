@@ -38,12 +38,26 @@
 
 // Exercício 4
 
-let a = 0;
+// let a = 0;
 
-if (a < 0) {
-  console.log('negative');
-} else if (a > 0) {
-  console.log('positive');
+// if (a < 0) {
+//   console.log('negative');
+// } else if (a > 0) {
+//   console.log('positive');
+// } else {
+//   console.log('zero');
+// }
+
+// Exercício 5
+
+let a = 101;
+let b = 30;
+let c = 50;
+
+if (a <= 0 || b <= 0 || c <= 0) {
+  console.log('erro, esse ângulo não é válido')
+} else if (a + b + c === 180) {
+  console.log(true);
 } else {
-  console.log('zero');
+  console.log(false);
 }
