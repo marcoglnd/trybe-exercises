@@ -89,23 +89,23 @@
 
 // Exercício 7
 
-let nota = 110
+// let nota = 110
 
-if (nota <= 100 && nota >= 90) {
-  console.log('A');
-} else if (nota < 90 && nota >= 80) {
-  console.log('B');
-} else if (nota < 80 && nota >= 70) {
-  console.log('C');
-} else if (nota < 70 && nota >= 60) {
-  console.log('D');
-} else if (nota < 60 && nota >= 50) {
-  console.log('E');
-} else if (nota < 50 && nota >= 0) {
-  console.log('F'); 
-} else {
-  console.log('Esse valor não é válido')
-}
+// if (nota <= 100 && nota >= 90) {
+//   console.log('A');
+// } else if (nota < 90 && nota >= 80) {
+//   console.log('B');
+// } else if (nota < 80 && nota >= 70) {
+//   console.log('C');
+// } else if (nota < 70 && nota >= 60) {
+//   console.log('D');
+// } else if (nota < 60 && nota >= 50) {
+//   console.log('E');
+// } else if (nota < 50 && nota >= 0) {
+//   console.log('F'); 
+// } else {
+//   console.log('Esse valor não é válido')
+// }
 
 // Exercício 8
 
@@ -118,3 +118,15 @@ if (nota <= 100 && nota >= 90) {
 // } else {
 //   console.log(false);
 // }
+
+// Exercício 9
+
+let a = 2;
+let b = 4;
+let c = 4;
+
+if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
+  console.log(true);
+} else {
+  console.log(false);
+}
