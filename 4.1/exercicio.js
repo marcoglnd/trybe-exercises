@@ -24,14 +24,26 @@
 
 //Exercício 3
 
-let a = 12;
-let b = 22;
-let c = 11;
+// let a = 12;
+// let b = 22;
+// let c = 11;
 
-if (a >= b && a >= c) {
-  console.log(a, 'é o maior número');
-} else if (a <= b && b >= c) {
-  console.log(b, 'é o maior número');
+// if (a >= b && a >= c) {
+//   console.log(a, 'é o maior número');
+// } else if (a <= b && b >= c) {
+//   console.log(b, 'é o maior número');
+// } else {
+//   console.log(c, 'é o maior número');
+// } 
+
+// Exercício 4
+
+let a = 0;
+
+if (a < 0) {
+  console.log('negative');
+} else if (a > 0) {
+  console.log('positive');
 } else {
-  console.log(c, 'é o maior número');
-} 
+  console.log('zero');
+}
