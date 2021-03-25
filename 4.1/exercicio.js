@@ -64,25 +64,46 @@
 
 //Exercício 6
 
-let peca = 'cavalo';
+// let peca = 'cavalo';
 
-switch(peca) {
-  case 'peão':
-    console.log('um quadrado de cada vez');
-    break;
-  case 'torre':
-    console.log('em linha reta');
-    break;
-  case 'bispo':
-    console.log('na diagonal');
-    break;
-  case 'cavalo':
-    console.log('em L');
-    break;
-  case 'rainha':
-    console.log('em todas as direções');
-    break;
-  case 'rei':
-    console.log('em todas as direções mas apenas um quadrado por vez');
-    break;
+// switch(peca) {
+//   case 'peão':
+//     console.log('um quadrado de cada vez');
+//     break;
+//   case 'torre':
+//     console.log('em linha reta');
+//     break;
+//   case 'bispo':
+//     console.log('na diagonal');
+//     break;
+//   case 'cavalo':
+//     console.log('em L');
+//     break;
+//   case 'rainha':
+//     console.log('em todas as direções');
+//     break;
+//   case 'rei':
+//     console.log('em todas as direções mas apenas um quadrado por vez');
+//     break;
+// }
+
+// Exercício 7
+
+// let nota = 100
+
+// switch(nota) {
+//   case (nota >= 90):
+//     console.log('A');
+// }
+
+// Exercício 8
+
+let a = 3;
+let b = 5;
+let c = 7;
+
+if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+  console.log(true);
+} else {
+  console.log(false);
 }
