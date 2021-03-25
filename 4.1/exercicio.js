@@ -50,14 +50,39 @@
 
 // Exercício 5
 
-let a = 101;
-let b = 30;
-let c = 50;
+// let a = 101;
+// let b = 30;
+// let c = 50;
 
-if (a <= 0 || b <= 0 || c <= 0) {
-  console.log('erro, esse ângulo não é válido')
-} else if (a + b + c === 180) {
-  console.log(true);
-} else {
-  console.log(false);
+// if (a <= 0 || b <= 0 || c <= 0) {
+//   console.log('erro, esse ângulo não é válido')
+// } else if (a + b + c === 180) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+//Exercício 6
+
+let peca = 'cavalo';
+
+switch(peca) {
+  case 'peão':
+    console.log('um quadrado de cada vez');
+    break;
+  case 'torre':
+    console.log('em linha reta');
+    break;
+  case 'bispo':
+    console.log('na diagonal');
+    break;
+  case 'cavalo':
+    console.log('em L');
+    break;
+  case 'rainha':
+    console.log('em todas as direções');
+    break;
+  case 'rei':
+    console.log('em todas as direções mas apenas um quadrado por vez');
+    break;
 }
