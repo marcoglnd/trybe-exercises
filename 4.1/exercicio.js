@@ -121,12 +121,24 @@
 
 // Exercício 9
 
-let a = 2;
-let b = 4;
-let c = 4;
+// let a = 2;
+// let b = 4;
+// let c = 4;
 
-if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
-  console.log(true);
+// if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// } 
+
+// Exercício 10
+
+let custo = 2000;
+let venda = 2500;
+
+if (custo < 0 || venda < 0) {
+  console.log('Erro, valor inválido');
 } else {
-  console.log(false);
+  console.log('O lucro sobre o produto é de: ', venda - (custo * 1.2));
 }
+
