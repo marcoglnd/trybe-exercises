@@ -133,12 +133,42 @@
 
 // Exercício 10
 
-let custo = 2000;
-let venda = 2500;
+// let custo = 2000;
+// let venda = 2500;
 
-if (custo < 0 || venda < 0) {
-  console.log('Erro, valor inválido');
+// if (custo < 0 || venda < 0) {
+//   console.log('Erro, valor inválido');
+// } else {
+//   console.log('O lucro sobre o produto é de: ', venda - (custo * 1.2));
+// }
+
+// Exercício 11
+
+let salario = 3000;
+let salarioBase = 0;
+
+if (salario > 5189.82) {
+  salarioBase = salario - 570.88;
+} else if (salario <= 5189.82 && salario >= 2594.93) {
+  salarioBase = salario - (salario * 0.11);
+} else if (salario <= 2594.92 && salario >= 1556.95) {
+  salarioBase = salario - (salario * 0.09);
 } else {
-  console.log('O lucro sobre o produto é de: ', venda - (custo * 1.2));
+  salarioBase = salario - (salario * 0.08);
 }
 
+let salarioLiquido = 0;
+
+if (salarioBase > 4664.68) {
+  salarioLiquido = salarioBase - (salarioBase * 0.275 - 869.36);
+} else if (salarioBase <= 4664.68 && salarioBase >= 3751.06) {
+  salarioLiquido = salarioBase - (salarioBase * 0.225 - 636.13);
+} else if (salarioBase <= 3751.05 && salarioBase >= 2826.66) {
+  salarioLiquido = salarioBase - (salarioBase * 0.15 - 354.80);
+} else if (salarioBase <= 2826.65 && salarioBase >= 1903.99) {
+  salarioLiquido = salarioBase - (salarioBase * 0.075 - 142.80);
+} else  {
+  salarioLiquido = salarioBase;
+}
+
+console.log(salarioLiquido);
