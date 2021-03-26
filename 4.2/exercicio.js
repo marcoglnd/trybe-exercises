@@ -42,12 +42,29 @@
 
 // Exercício 5
 
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let maior = numbers[0];
+// for (let index = 1; index < numbers.length; index++) {
+//   if (numbers[index] > maior) {
+//     maior = numbers[index];
+//   }
+// }
+
+// console.log(maior);
+
+//Exercício 6
+
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let maior = numbers[0];
-for (let index = 1; index < numbers.length; index++) {
-  if (numbers[index] > maior) {
-    maior = numbers[index];
+let impar = 0;
+
+for (let index = 0; index < numbers.length; index++) {
+  if (numbers[index] % 2 !== 0) {
+    impar++;
   }
 }
 
-console.log(maior);
+if (impar > 0) {
+  console.log(impar);
+} else {
+  console.log('nenhum valor ímpar encontrado');
+}
