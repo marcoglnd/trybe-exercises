@@ -105,34 +105,48 @@
 
 // Exercício Bonus 1
 
-let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
-let aux = 0;
+// let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
+// let aux = 0;
 
-for (let index = 0; index < numbers.length - 1; index++) {
-  for (let index2 = 0; index2 < numbers.length - index -1; index2++) {
-    if (numbers[index2] > numbers [index2 + 1]) {
-      aux = numbers[index2];
-      numbers[index2] = numbers[index2 + 1];
-      numbers[index2 + 1] = aux;
-    }
-  }
-}
+// for (let index = 0; index < numbers.length - 1; index++) {
+//   for (let index2 = 0; index2 < numbers.length - index -1; index2++) {
+//     if (numbers[index2] > numbers [index2 + 1]) {
+//       aux = numbers[index2];
+//       numbers[index2] = numbers[index2 + 1];
+//       numbers[index2 + 1] = aux;
+//     }
+//   }
+// }
 
-console.log(numbers);
+// console.log(numbers);
 
 // Exercício Bonus 2
 
-let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
-let aux = 0;
+// let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
+// let aux = 0;
+
+// for (let index = 0; index < numbers.length - 1; index++) {
+//   for (let index2 = 0; index2 < numbers.length - index -1; index2++) {
+//     if (numbers[index2] < numbers [index2 + 1]) {
+//       aux = numbers[index2];
+//       numbers[index2] = numbers[index2 + 1];
+//       numbers[index2 + 1] = aux;
+//     }
+//   }
+// }
+
+// console.log(numbers);
+
+// Exercício Bônus 3
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let secondArray = [];
 
 for (let index = 0; index < numbers.length - 1; index++) {
-  for (let index2 = 0; index2 < numbers.length - index -1; index2++) {
-    if (numbers[index2] < numbers [index2 + 1]) {
-      aux = numbers[index2];
-      numbers[index2] = numbers[index2 + 1];
-      numbers[index2 + 1] = aux;
-    }
+  secondArray.push(numbers[index] * numbers[index + 1]);
+  if (index + 2 === numbers.length) {
+    secondArray.push(2 * numbers[index + 1]);
   }
 }
 
-console.log(numbers);
+console.log(secondArray);
