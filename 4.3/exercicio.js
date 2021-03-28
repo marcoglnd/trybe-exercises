@@ -21,9 +21,38 @@
 
 // Exercício 3
 
-let n = 5;
-let linha = '';
+// let n = 5;
+// let linha = '';
+// for (let index = 1; index <= n; index++) {
+//   linha = ' '.repeat(n - index) + '*'.repeat(index);
+//   console.log(linha);
+// }
+
+// Exercício 4
+
+// let n = 5;
+// let meioDaPiramide = (n +1)/2;
+// let linha = '';
+// for (let index = 1; index <= n; index++) {
+//   if (index === meioDaPiramide) {
+//     linha = linha + '*';
+//   } else {
+//     linha = linha + ' ';
+//   }
+//   console.log(linha);
+// }
+
+// Exercício 6
+
+let n = 9;
+let primo = 0;
 for (let index = 1; index <= n; index++) {
-  linha = ' '.repeat(n - index) + '*'.repeat(index);
-  console.log(linha);
+  if (n % index === 0) {
+    primo++;
+  }
+}
+if (primo === 2) {
+  console.log('O número é primo');
+} else {
+  console.log('O número não é primo');
 }
