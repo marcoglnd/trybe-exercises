@@ -33,26 +33,34 @@
 // let n = 5;
 // let meioDaPiramide = (n +1)/2;
 // let linha = '';
-// for (let index = 1; index <= n; index++) {
-//   if (index === meioDaPiramide) {
-//     linha = linha + '*';
-//   } else {
-//     linha = linha + ' ';
+// let leftIndex = meioDaPiramide;
+// let rightIndex = meioDaPiramide;
+
+// for (let indexLinha = 0; indexLinha <= meioDaPiramide; indexLinha++) {
+//   for (let indexColuna = 0; indexColuna <= n; indexColuna++) {
+//     if (indexColuna > leftIndex && indexColuna < rightIndex) {
+//       linha = linha + '*';
+//     } else {
+//       linha = linha + ' ';
+//     }
 //   }
 //   console.log(linha);
+//   linha = '';
+//   leftIndex--;
+//   rightIndex++;
 // }
 
 // Exercício 6
 
-let n = 9;
-let primo = 0;
-for (let index = 1; index <= n; index++) {
-  if (n % index === 0) {
-    primo++;
-  }
-}
-if (primo === 2) {
-  console.log('O número é primo');
-} else {
-  console.log('O número não é primo');
-}
+// let n = 9;
+// let primo = 0;
+// for (let index = 1; index <= n; index++) {
+//   if (n % index === 0) {
+//     primo++;
+//   }
+// }
+// if (primo === 2) {
+//   console.log('O número é primo');
+// } else {
+//   console.log('O número não é primo');
+// }
