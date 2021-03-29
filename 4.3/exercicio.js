@@ -50,6 +50,28 @@
 //   rightIndex++;
 // }
 
+// Exercício 5
+
+let n = 9;
+let meioDaPiramide = (n +1)/2;
+let linha = '';
+let leftIndex = meioDaPiramide;
+let rightIndex = meioDaPiramide;
+
+for (let indexLinha = 1; indexLinha <= meioDaPiramide; indexLinha++) {
+  linha = '';
+  for (let indexColuna = 1; indexColuna <= n; indexColuna++) {
+    if (indexColuna === leftIndex || indexColuna === rightIndex || indexLinha === meioDaPiramide) {
+      linha = linha + '*';
+    } else {
+      linha = linha + ' ';
+    }
+  }
+  leftIndex--;
+  rightIndex++;
+  console.log(linha);
+}
+
 // Exercício 6
 
 // let n = 9;
