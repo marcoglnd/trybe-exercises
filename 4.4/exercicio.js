@@ -165,16 +165,36 @@
 
 // Exercício 4
 
-let array = ['José', 'Lucas', 'Margarida', 'Fernanda', 'Cairo', 'Joana'];
+// let array = ['José', 'Lucas', 'Margarida', 'Fernanda', 'Cairo', 'Joana'];
 
-function maiorNome (array) {
-  let maior = array[0];
-  for (index = 1; index < array.length; index += 1) {
-    if (maior.length < array[index].length) {
-      maior = array[index];
-    }
+// function maiorNome (array) {
+//   let maior = array[0];
+//   for (index = 1; index < array.length; index += 1) {
+//     if (maior.length < array[index].length) {
+//       maior = array[index];
+//     }
+//   }
+//   console.log(maior);
+// }
+
+// maiorNome(array)
+
+// Exercício 5
+
+// let array = [2, 3, 2, 5, 8, 2, 3]; 
+
+// function maisSeRepete (array) {
+
+// }
+
+// Exercício 6
+
+function somaInteiros (n) {
+  let soma = n;
+  for (index = 0; index < n; index += 1) {
+    soma = soma + index;
   }
-  console.log(maior);
+  console.log(soma);
 }
 
-maiorNome(array)
+somaInteiros(7)
