@@ -107,22 +107,40 @@
 // Exercícios Parte II - Funções
 // Exercício 1
 
-function verificaPalindromo(string) {
-  let secondString = '';
-  let palindromo = 0;
-  for (let index = string.length - 1; index >= 0; index -= 1) {
-    secondString = secondString + string[index];
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === secondString[index]) {
-      palindromo += 1;
+// function verificaPalindromo(string) {
+//   let secondString = '';
+//   let palindromo = 0;
+//   for (let index = string.length - 1; index >= 0; index -= 1) {
+//     secondString = secondString + string[index];
+//   }
+//   for (let index = 0; index < string.length; index += 1) {
+//     if (string[index] === secondString[index]) {
+//       palindromo += 1;
+//     }
+//   }
+//   if (palindromo === string.length) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+
+// verificaPalindromo('desenvolvimento')
+
+// Exercício 2
+
+let array = [2, 3, 6, 7, 10, 1];
+
+function maior (array) {
+  let maiorNumero = array[0]
+  let maiorNumeroIndex = 0;
+  for (index = 0; index < array.length - 1; index += 1) {
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index]
+      maiorNumeroIndex = index;
     }
   }
-  if (palindromo === string.length) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+  console.log(maiorNumeroIndex);
 }
 
-verificaPalindromo('desenvolvimento')
+maior(array)
