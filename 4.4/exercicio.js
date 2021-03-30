@@ -68,38 +68,61 @@
 // Exercícios Parte I - Objetos e For In
 // Exercício 1
 
-let info = {
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-};
+// let info = {
+//   personagem: 'Margarida',
+//   origem: 'Pato Donald',
+//   nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+// };
 
-console.log('Bem-vinda,', info.personagem);
+// console.log('Bem-vinda,', info.personagem);
 
-// Exercício 2
+// // Exercício 2
 
-info.recorrente = 'Sim';
-console.log(info);
+// info.recorrente = 'Sim';
+// console.log(info);
 
-// Exercício 3
+// // Exercício 3
 
-for (let index in info) {
-  console.log(index);
+// for (let index in info) {
+//   console.log(index);
+// }
+
+// // Exercício 4
+
+// for (let index in info) {
+//   console.log(info[index]);
+// }
+
+// let secondInfo = {
+//   personagem: 'Tio Patinhas',
+//   origem: 'Christmas on Bear Mountain, Dell\'s Four Color Comics #178',
+//   nota: 'O último MacPatinhas',
+//   recorrente: 'Sim'
+// };
+
+// for (let index in info) {
+//   console.log(info[index], 'e', secondInfo[index]);
+// }
+
+// Exercícios Parte II - Funções
+// Exercício 1
+
+function verificaPalindromo(string) {
+  let secondString = '';
+  let palindromo = 0;
+  for (let index = string.length - 1; index >= 0; index -= 1) {
+    secondString = secondString + string[index];
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === secondString[index]) {
+      palindromo += 1;
+    }
+  }
+  if (palindromo === string.length) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
 
-// Exercício 4
-
-for (let index in info) {
-  console.log(info[index]);
-}
-
-let secondInfo = {
-  personagem: 'Tio Patinhas',
-  origem: 'Christmas on Bear Mountain, Dell\'s Four Color Comics #178',
-  nota: 'O último MacPatinhas',
-  recorrente: 'Sim'
-};
-
-for (let index in info) {
-  console.log(info[index], 'e', secondInfo[index]);
-}
+verificaPalindromo('desenvolvimento')
