@@ -147,18 +147,34 @@
 
 // Exercício 3
 
-let array = [2, 4, 6, 7, 10, 0, -3];
+// let array = [2, 4, 6, 7, 10, 0, -3];
 
-function menor (array) {
-  let menorNumero = array[0]
-  let menorNumeroIndex = 0;
-  for (index = 0; index < array.length; index += 1) {
-    if (array[index] < menorNumero) {
-      menorNumero = array[index]
-      menorNumeroIndex = index;
+// function menor (array) {
+//   let menorNumero = array[0]
+//   let menorNumeroIndex = 0;
+//   for (index = 0; index < array.length; index += 1) {
+//     if (array[index] < menorNumero) {
+//       menorNumero = array[index]
+//       menorNumeroIndex = index;
+//     }
+//   }
+//   console.log(menorNumeroIndex);
+// }
+
+// menor(array)
+
+// Exercício 4
+
+let array = ['José', 'Lucas', 'Margarida', 'Fernanda', 'Cairo', 'Joana'];
+
+function maiorNome (array) {
+  let maior = array[0];
+  for (index = 1; index < array.length; index += 1) {
+    if (maior.length < array[index].length) {
+      maior = array[index];
     }
   }
-  console.log(menorNumeroIndex);
+  console.log(maior);
 }
 
-menor(array)
+maiorNome(array)
