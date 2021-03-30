@@ -184,17 +184,43 @@
 // let array = [2, 3, 2, 5, 8, 2, 3]; 
 
 // function maisSeRepete (array) {
-
+//   let repete = 0;
+//   for (index = 0; index < array.length; index +=1) {
+//     for (index2 = 0; index2 < array.length; index +=1) {
+//       if (array[index] === array[index2]) {
+//         repete +=1;
+//       }
+//     }
+//   }
+//   console.log(repete);
 // }
 
 // Exercício 6
 
-function somaInteiros (n) {
-  let soma = n;
-  for (index = 0; index < n; index += 1) {
-    soma = soma + index;
+// function somaInteiros (n) {
+//   let soma = n;
+//   for (index = 0; index < n; index += 1) {
+//     soma = soma + index;
+//   }
+//   console.log(soma);
+// }
+
+// somaInteiros(7)
+
+let word = 'joaofernando';
+let ending = 'fernando';
+
+function wordEnding (word, ending) {
+  let aux = word.length - ending.length;
+  let newString = '';
+  for (index = aux; index < word.length; index += 1) {
+    newString = newString + word[index];
   }
-  console.log(soma);
+  if (newString === ending) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
 
-somaInteiros(7)
+wordEnding(word, ending)
