@@ -49,18 +49,20 @@
 
 // Exercício 5
 
-let estadoPessoa = 'Oi';
-switch(estadoPessoa) {
-  case 'Aprovado':
-    console.log('Parabéns, você foi aprovada(o)!');
-    break;
-  case 'Lista':
-    console.log('Você está na nossa lista de espera');
-    break;
-  case 'Reprovado':
-    console.log('Você foi reprovada(o)');
-    break;
-  default:
-    console.log('Por favor insira o valor novamente');
-    break;
-}
+// let estadoPessoa = 'Oi';
+// switch(estadoPessoa) {
+//   case 'Aprovado':
+//     console.log('Parabéns, você foi aprovada(o)!');
+//     break;
+//   case 'Lista':
+//     console.log('Você está na nossa lista de espera');
+//     break;
+//   case 'Reprovado':
+//     console.log('Você foi reprovada(o)');
+//     break;
+//   default:
+//     console.log('Por favor insira o valor novamente');
+//     break;
+// }
+
+console.log(Math.ceil(Math.random() * 60)); 
