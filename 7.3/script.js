@@ -30,17 +30,42 @@ const assert = require('assert');
 
 // const assert = require('assert');
 
-function myRemove(arr, item) {
-  let newArr = [];
-  for (let index = 0; index < arr.length; index += 1) {
-    if (item !== arr[index]) {
-      newArr.push(arr[index]);
-    }
-  }
-  return newArr;
-}
+// function myRemove(arr, item) {
+//   let newArr = [];
+//   for (let index = 0; index < arr.length; index += 1) {
+//     if (item !== arr[index]) {
+//       newArr.push(arr[index]);
+//     }
+//   }
+//   return newArr;
+// }
 
 //assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3], 'array deveria retornar sem o 3')
 //assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4], 'array deveria retornar sem o 3');
 //assert.deepStrictEqual(myRemove([1, 2, 3, 4], 0), [1, 2, 3, 4], 'array deveria estar intacto')
 //assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4], 'array deveria estar intacto')
+
+// ----------------------------
+
+// Exercício 3
+// Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) retorna o array esperado
+// Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
+// Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array passado por parâmetro sofreu alterações
+// Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado
+
+function myRemoveWithoutCopy(arr, item) {
+  for (let index = 0, len = arr.length; index < len; index += 1) {
+    if (arr[index] === item) {
+      arr.splice(index, 1);
+      index -= 1;
+      len -= 1;
+    }
+  }
+
+  return arr;
+}
+
+//assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4], 'array deveria retornar sem o 3');
+//assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], 'array deveria retornar sem o 3')
+//assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], 'array deveria retornar sem o 3');
+assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4], 'array deveria retornar intacto');
