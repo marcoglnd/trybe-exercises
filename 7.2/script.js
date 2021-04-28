@@ -78,8 +78,7 @@ const lesson3 = {
 // Exercício 1
 
 function addTurn(object, key, value) {
-  key = 'turno'
-  object.key = value;
+  object[key] = value;
 }
 
 addTurn(lesson2, 'turno', 'manhã')
@@ -111,3 +110,33 @@ valuesObject(lesson1);
 
 // Exercício 5. Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte:
 
+const allLessons = {}
+Object.assign(allLessons, {lesson1, lesson2, lesson3});
+console.log(allLessons);
+
+// Exercício 6. Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
+
+const numeroTotal = (object) => {
+  const objectKeys = Object.keys(object);
+  let allStudents = 0;
+  for (let index = 0; index < objectKeys.length; index += 1) {
+    allStudents += object[objectKeys[index]].numeroEstudantes;
+  }
+  return allStudents;
+}
+
+console.log(numeroTotal(allLessons));
+
+// Exercício 7. Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+
+const valueByIndex = (object, index) => Object.values(object)[index];
+
+console.log(valueByIndex(lesson2, 0));
+
+// Exercício 8. Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
+
+function contains (object, key, value) {
+  return Object.values(object).includes(value)
+}
+
+console.log(contains(lesson1, 'materia', 'Matemática')); 
