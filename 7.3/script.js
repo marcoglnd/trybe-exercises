@@ -53,19 +53,41 @@ const assert = require('assert');
 // Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array passado por parâmetro sofreu alterações
 // Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado
 
-function myRemoveWithoutCopy(arr, item) {
-  for (let index = 0, len = arr.length; index < len; index += 1) {
-    if (arr[index] === item) {
-      arr.splice(index, 1);
-      index -= 1;
-      len -= 1;
-    }
-  }
+// function myRemoveWithoutCopy(arr, item) {
+//   for (let index = 0, len = arr.length; index < len; index += 1) {
+//     if (arr[index] === item) {
+//       arr.splice(index, 1);
+//       index -= 1;
+//       len -= 1;
+//     }
+//   }
 
-  return arr;
-}
+//   return arr;
+// }
 
 //assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4], 'array deveria retornar sem o 3');
 //assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], 'array deveria retornar sem o 3')
 //assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], 'array deveria retornar sem o 3');
-assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4], 'array deveria retornar intacto');
+//assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4], 'array deveria retornar intacto');
+
+// Exercício 4
+
+// Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado
+// Faça uma chamada com um número divisível por 3 e verifique se o retorno é o esperado
+// Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado
+// Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado
+// Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado
+
+function myFizzBuzz(num) {
+  if (typeof num !== 'number') return false;
+  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+  if (num % 3 === 0) return 'fizz';
+  if (num % 5 === 0) return 'buzz';
+  return num;
+}
+
+//assert.strictEqual(myFizzBuzz(15), 'fizzbuzz', 'resultado deveria ser fizzbuzz')
+//assert.strictEqual(myFizzBuzz(9), 'fizz', 'resultado deveria ser fizz')
+//assert.strictEqual(myFizzBuzz(25), 'buzz', 'resultado deveria ser buzz')
+//assert.strictEqual(myFizzBuzz(4), 4, 'resultado deveria ser 4')
+assert.strictEqual(myFizzBuzz('mamamia'), false, 'resultado deveria ser false')
