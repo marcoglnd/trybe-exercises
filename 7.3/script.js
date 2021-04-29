@@ -142,19 +142,38 @@
 // Exercício 2
 // Escreva a função wordLengths para passar nos testes já implementados.
 
+// const assert = require('assert');
+
+// const wordLengths = (array) => {
+//   const answer = [];
+//   for (let index = 0; index < array.length; index += 1) {
+//     answer[index] = array[index].length;
+//   }
+//   return answer;
+// };
+
+// const words = ['sun', 'potato', 'roundabout', 'pizza'];
+// const expected = [3, 6, 10, 5];
+// const output = wordLengths(words);
+
+// assert.strictEqual(typeof wordLengths, 'function');
+// assert.deepStrictEqual(output, expected);
+
+// Exercício 3. Escreva a função sumAllNumbers para passar nos testes já implementados.
+
 const assert = require('assert');
 
-const wordLengths = (array) => {
-  const answer = [];
+const sumAllNumbers = (array) => {
+  let sum = 0;
   for (let index = 0; index < array.length; index += 1) {
-    answer[index] = array[index].length;
+    sum += array[index];
   }
-  return answer;
+  return sum;
 };
 
-const words = ['sun', 'potato', 'roundabout', 'pizza'];
-const expected = [3, 6, 10, 5];
-const output = wordLengths(words);
+const numbers = [9, 23, 10, 3, 8];
+const expected = 53;
+const output = sumAllNumbers(numbers);
 
-assert.strictEqual(typeof wordLengths, 'function');
-assert.deepStrictEqual(output, expected);
+assert.strictEqual(typeof sumAllNumbers, 'function');
+assert.strictEqual(output, expected);
