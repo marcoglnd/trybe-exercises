@@ -120,21 +120,41 @@
 // Parte II
 // Exercício 1. Escreva a função addOne para passar nos testes já implementados.
 
+// const assert = require('assert');
+
+// const addOne = (array) => {
+//   newArray = []
+//   for (let index = 0; index < array.length; index += 1) {
+//     newArray[index] = array[index] + 1;
+//   }
+//   return newArray;
+// };
+
+// const myArray = [31, 57, 12, 5];
+// const unchanged = [31, 57, 12, 5];
+// const expected = [32, 58, 13, 6];
+// const output = addOne(myArray);
+
+// assert.strictEqual(typeof addOne, 'function');
+// assert.deepStrictEqual(output, expected);
+// assert.deepStrictEqual(myArray, unchanged);
+
+// Exercício 2
+// Escreva a função wordLengths para passar nos testes já implementados.
+
 const assert = require('assert');
 
-const addOne = (array) => {
-  newArray = []
+const wordLengths = (array) => {
+  const answer = [];
   for (let index = 0; index < array.length; index += 1) {
-    newArray[index] = array[index] + 1;
+    answer[index] = array[index].length;
   }
-  return newArray;
+  return answer;
 };
 
-const myArray = [31, 57, 12, 5];
-const unchanged = [31, 57, 12, 5];
-const expected = [32, 58, 13, 6];
-const output = addOne(myArray);
+const words = ['sun', 'potato', 'roundabout', 'pizza'];
+const expected = [3, 6, 10, 5];
+const output = wordLengths(words);
 
-assert.strictEqual(typeof addOne, 'function');
+assert.strictEqual(typeof wordLengths, 'function');
 assert.deepStrictEqual(output, expected);
-assert.deepStrictEqual(myArray, unchanged);
