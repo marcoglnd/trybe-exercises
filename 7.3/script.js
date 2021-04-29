@@ -4,7 +4,7 @@
 // Teste se a função sum lança um erro quando os parâmetros são 4 e "5" (string 5)
 // Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
 
-const assert = require('assert');
+// const assert = require('assert');
 
 // function sum(a, b) {
 //   if (typeof a !== 'number' || typeof b !== 'number') {
@@ -70,6 +70,8 @@ const assert = require('assert');
 //assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], 'array deveria retornar sem o 3');
 //assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4], 'array deveria retornar intacto');
 
+// --------------------
+
 // Exercício 4
 
 // Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado
@@ -78,16 +80,61 @@ const assert = require('assert');
 // Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado
 // Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado
 
-function myFizzBuzz(num) {
-  if (typeof num !== 'number') return false;
-  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
-  if (num % 3 === 0) return 'fizz';
-  if (num % 5 === 0) return 'buzz';
-  return num;
-}
+// function myFizzBuzz(num) {
+//   if (typeof num !== 'number') return false;
+//   if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+//   if (num % 3 === 0) return 'fizz';
+//   if (num % 5 === 0) return 'buzz';
+//   return num;
+// }
 
 //assert.strictEqual(myFizzBuzz(15), 'fizzbuzz', 'resultado deveria ser fizzbuzz')
 //assert.strictEqual(myFizzBuzz(9), 'fizz', 'resultado deveria ser fizz')
 //assert.strictEqual(myFizzBuzz(25), 'buzz', 'resultado deveria ser buzz')
 //assert.strictEqual(myFizzBuzz(4), 4, 'resultado deveria ser 4')
-assert.strictEqual(myFizzBuzz('mamamia'), false, 'resultado deveria ser false')
+//assert.strictEqual(myFizzBuzz('mamamia'), false, 'resultado deveria ser false')
+
+// -----------------------
+
+// Exercício 5
+
+// const obj1 = {
+//   title: 'My Title',
+//   description: 'My Description',
+// };
+
+// const obj2 = {
+//   title: 'My Title',
+//   description: 'My Description',
+// };
+
+// const obj3 = {
+//   title: 'My Different Title',
+//   description: 'My Description',
+// };
+
+// assert.deepStrictEqual(obj1, obj3, 'objetos são identicos');
+
+// ------------------------
+
+// Parte II
+// Exercício 1. Escreva a função addOne para passar nos testes já implementados.
+
+const assert = require('assert');
+
+const addOne = (array) => {
+  newArray = []
+  for (let index = 0; index < array.length; index += 1) {
+    newArray[index] = array[index] + 1;
+  }
+  return newArray;
+};
+
+const myArray = [31, 57, 12, 5];
+const unchanged = [31, 57, 12, 5];
+const expected = [32, 58, 13, 6];
+const output = addOne(myArray);
+
+assert.strictEqual(typeof addOne, 'function');
+assert.deepStrictEqual(output, expected);
+assert.deepStrictEqual(myArray, unchanged);
