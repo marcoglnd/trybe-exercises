@@ -180,29 +180,47 @@
 
 // Exercício 4. Escreva a função findTheNeedle para passar nos testes já implementados.
 
+// const assert = require('assert');
+
+// const findTheNeedle = (array, string) => {
+//   let output = -1;
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (array[index] === string) {
+//       output = index;
+//     }
+//   }
+//   return output;
+// }
+
+// let words = ['house', 'train', 'slide', 'needle', 'book'];
+// let expected = 3;
+// let output = findTheNeedle(words, 'needle');
+// assert.strictEqual(output, expected);
+
+// words = ['plant', 'shelf', 'arrow', 'bird'];
+// expected = 0;
+// output = findTheNeedle(words, 'plant');
+// assert.strictEqual(output, expected);
+
+// words = ['plant', 'shelf', 'arrow', 'bird'];
+// expected = -1;
+// output = findTheNeedle(words, 'plat');
+// assert.strictEqual(output, expected);
+
+// Parte III
+// Exercício 1
+
 const assert = require('assert');
 
-const findTheNeedle = (array, string) => {
-  let output = -1;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === string) {
-      output = index;
-    }
+const greetPeople = (people) => {
+  let greeting = [];
+
+  for (const person in people) {
+    greeting[person] = `Hello ${people[person]}`;
   }
-  return output;
-}
+  return greeting;
+};
 
-let words = ['house', 'train', 'slide', 'needle', 'book'];
-let expected = 3;
-let output = findTheNeedle(words, 'needle');
-assert.strictEqual(output, expected);
-
-words = ['plant', 'shelf', 'arrow', 'bird'];
-expected = 0;
-output = findTheNeedle(words, 'plant');
-assert.strictEqual(output, expected);
-
-words = ['plant', 'shelf', 'arrow', 'bird'];
-expected = -1;
-output = findTheNeedle(words, 'plat');
-assert.strictEqual(output, expected);
+const parameter = ['Irina', 'Ashleigh', 'Elsa'];
+const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
+assert.deepStrictEqual(greetPeople(parameter), result, 'error');
