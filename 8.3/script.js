@@ -205,17 +205,32 @@ const books = [
 
 // 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
+// const expectedResult = [
+//   'Frank Herbert',
+//   'George R. R. Martin',
+//   'Isaac Asimov',
+//   'J. R. R. Tolkien',
+// ];
+
+// function fantasyOrScienceFictionAuthors() {
+//   const fictionFantasyBook = books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
+//   const fictionFantasyAuthor = fictionFantasyBook.map((author) => author.author.name);
+//   return fictionFantasyAuthor.sort();
+// }
+
+// assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
+
+// 6 -Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
 const expectedResult = [
-  'Frank Herbert',
-  'George R. R. Martin',
-  'Isaac Asimov',
-  'J. R. R. Tolkien',
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
 ];
 
-function fantasyOrScienceFictionAuthors() {
-  const fictionFantasyBook = books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');
-  const fictionFantasyAuthor = fictionFantasyBook.map((author) => author.author.name);
-  return fictionFantasyAuthor.sort();
+function oldBooks() {
+  const sixtyYearBooks = books.filter((book) => book.releaseYear < 1962);
+  return sixtyYearBooks.map((book) => book.name)
 }
 
-assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
+assert.deepStrictEqual(oldBooks(), expectedResult);
