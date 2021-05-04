@@ -210,17 +210,46 @@
 // Parte III
 // Exercício 1
 
+// const assert = require('assert');
+
+// const greetPeople = (people) => {
+//   let greeting = [];
+
+//   for (const person in people) {
+//     greeting[person] = `Hello ${people[person]}`;
+//   }
+//   return greeting;
+// };
+
+// const parameter = ['Irina', 'Ashleigh', 'Elsa'];
+// const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
+// assert.deepStrictEqual(greetPeople(parameter), result, 'error');
+
+// Exercício 2
+
 const assert = require('assert');
 
-const greetPeople = (people) => {
-  let greeting = [];
+const removeVowels = (word) => {
+  const characters = word.split('');
+  const results = [];
 
-  for (const person in people) {
-    greeting[person] = `Hello ${people[person]}`;
+  for (let index = 0; index < characters.length; index += 1) {
+    if (
+      characters[index] === 'a' ||
+      characters[index] === 'o' ||
+      characters[index] === 'i' ||
+      characters[index] === 'e' ||
+      characters[index] === 'u'
+    ) {
+      results.push(characters[index]);
+    } else {
+      results.push('_');
+    }
   }
-  return greeting;
+  return results;
 };
 
-const parameter = ['Irina', 'Ashleigh', 'Elsa'];
-const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
-assert.deepStrictEqual(greetPeople(parameter), result, 'error');
+
+const parameter = 'Dayane';
+const result = 'D1y2n3';
+assert.strictEqual(removeVowels(parameter), result, 'error');

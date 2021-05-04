@@ -1,0 +1,51 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.number-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header {
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #fafafa;
+  text-align: center;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  font-size: 30px;
+  margin: 10px;
+}
+
+#boxA {
+  background-color: wheat;
+}
+
+#boxB {
+  background-color: paleturquoise;
+  flex: 1 0 auto;
+}
+
+#boxC {
+  background-color: limegreen;
+  flex: 1 0 auto;
+}
+
+#boxD {
+  background-color: lightcoral;
+}
