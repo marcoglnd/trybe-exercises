@@ -82,42 +82,42 @@ const books = [
 
 // 2 - Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
 
-// const expectedResult = [
-//   {
-//     age: 31,
-//     author: 'Isaac Asimov',
-//   },
-//   {
-//     age: 38,
-//     author: 'H. P. Lovecraft',
-//   },
-//   {
-//     age: 39,
-//     author: 'Stephen King',
-//   },
-//   {
-//     age: 43,
-//     author: 'George R. R. Martin',
-//   },
-//   {
-//     age: 45,
-//     author: 'Frank Herbert',
-//   },
-//   {
-//     age: 62,
-//     author: 'J. R. R. Tolkien',
-//   },
-// ];
+const expectedResult = [
+  {
+    age: 31,
+    author: 'Isaac Asimov',
+  },
+  {
+    age: 38,
+    author: 'H. P. Lovecraft',
+  },
+  {
+    age: 39,
+    author: 'Stephen King',
+  },
+  {
+    age: 43,
+    author: 'George R. R. Martin',
+  },
+  {
+    age: 45,
+    author: 'Frank Herbert',
+  },
+  {
+    age: 62,
+    author: 'J. R. R. Tolkien',
+  },
+];
 
-// function nameAndAge() {
-//   const unsortedArray = books.map((book) => ({ 
-//     age: book.releaseYear - book.author.birthYear, 
-//     author: `${book.author.name}` 
-//   }));
-//   return unsortedArray.sort((author1, author2) => author1.age - author2.age);
-// }
+function nameAndAge() {
+  const unsortedArray = books.map((book) => ({ 
+    age: book.releaseYear - book.author.birthYear, 
+    author: `${book.author.name}` 
+  }));
+  return unsortedArray.sort((author1, author2) => author1.age - author2.age);
+}
 
-// assert.deepStrictEqual(nameAndAge(), expectedResult);
+assert.deepStrictEqual(nameAndAge(), expectedResult);
 
 // 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 
@@ -237,10 +237,10 @@ const books = [
 
 // 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. Dica: cada inicial termina com um ponto.
 
-const expectedResult = 'O Senhor dos Anéis';
+// const expectedResult = 'O Senhor dos Anéis';
 
-function authorWith3DotsOnName() {
-  return books.find((book) => book.author.name[1] === '.' && book.author.name[4] && book.author.name[7]).name
-}
+// function authorWith3DotsOnName() {
+//   return books.find((book) => book.author.name[1] === '.' && book.author.name[4] && book.author.name[7]).name
+// }
 
-assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+// assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
