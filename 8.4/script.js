@@ -270,86 +270,107 @@
 
 // 4 - Encontre o livro com o maior nome.
 
+// const assert = require('assert');
+
+// const books = [
+//   {
+//     id: 1,
+//     name: 'As Crônicas de Gelo e Fogo',
+//     genre: 'Fantasia',
+//     author: {
+//       name: 'George R. R. Martin',
+//       birthYear: 1948,
+//     },
+//     releaseYear: 1991,
+//   },
+//   {
+//     id: 2,
+//     name: 'O Senhor dos Anéis',
+//     genre: 'Fantasia',
+//     author: {
+//       name: 'J. R. R. Tolkien',
+//       birthYear: 1892,
+//     },
+//     releaseYear: 1954,
+//   },
+//   {
+//     id: 3,
+//     name: 'Fundação',
+//     genre: 'Ficção Científica',
+//     author: {
+//       name: 'Isaac Asimov',
+//       birthYear: 1920,
+//     },
+//     releaseYear: 1951,
+//   },
+//   {
+//     id: 4,
+//     name: 'Duna',
+//     author: {
+//       name: 'Frank Herbert',
+//       birthYear: 1920,
+//     },
+//     releaseYear: 1965,
+//   },
+//   {
+//     id: 5,
+//     name: 'A Coisa',
+//     genre: 'Terror',
+//     author: {
+//       name: 'Stephen King',
+//       birthYear: 1947,
+//     },
+//     releaseYear: 1986,
+//   },
+//   {
+//     id: 6,
+//     name: 'O Chamado de Cthulhu',
+//     genre: 'Terror',
+//     author: {
+//       name: 'H. P. Lovecraft',
+//       birthYear: 1890,
+//     },
+//     releaseYear: 1928,
+//   },
+// ];
+
+// const expectedResult = {
+//   author: {
+//     birthYear: 1948,
+//     name: 'George R. R. Martin',
+//   },
+//   genre: 'Fantasia',
+//   id: 1,
+//   name: 'As Crônicas de Gelo e Fogo',
+//   releaseYear: 1991,
+// };
+
+// function longestNamedBook() {
+//   return books.reduce((acc, curr) => {
+//     if (acc.name.length < curr.name.length) return curr;
+//     return acc;
+//   })
+// }
+
+// assert.deepStrictEqual(longestNamedBook(), expectedResult);
+
+// 5 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+
 const assert = require('assert');
 
-const books = [
-  {
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    genre: 'Fantasia',
-    author: {
-      name: 'George R. R. Martin',
-      birthYear: 1948,
-    },
-    releaseYear: 1991,
-  },
-  {
-    id: 2,
-    name: 'O Senhor dos Anéis',
-    genre: 'Fantasia',
-    author: {
-      name: 'J. R. R. Tolkien',
-      birthYear: 1892,
-    },
-    releaseYear: 1954,
-  },
-  {
-    id: 3,
-    name: 'Fundação',
-    genre: 'Ficção Científica',
-    author: {
-      name: 'Isaac Asimov',
-      birthYear: 1920,
-    },
-    releaseYear: 1951,
-  },
-  {
-    id: 4,
-    name: 'Duna',
-    author: {
-      name: 'Frank Herbert',
-      birthYear: 1920,
-    },
-    releaseYear: 1965,
-  },
-  {
-    id: 5,
-    name: 'A Coisa',
-    genre: 'Terror',
-    author: {
-      name: 'Stephen King',
-      birthYear: 1947,
-    },
-    releaseYear: 1986,
-  },
-  {
-    id: 6,
-    name: 'O Chamado de Cthulhu',
-    genre: 'Terror',
-    author: {
-      name: 'H. P. Lovecraft',
-      birthYear: 1890,
-    },
-    releaseYear: 1928,
-  },
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
-};
-
-function longestNamedBook() {
-  return books.reduce((acc, curr) => {
-    if (acc.name.length < curr.name.length) return curr;
-    return acc;
-  })
+function containsA() {
+  const namesJoint = names.join('');
+  let acc = 0;
+  for (let index = 0; index < namesJoint.length; index += 1) {
+    if (namesJoint[index] === 'a' || namesJoint[index] === 'A') acc += 1;
+  }
+  return acc;
 }
 
-assert.deepStrictEqual(longestNamedBook(), expectedResult);
+assert.deepStrictEqual(containsA(), 20);
