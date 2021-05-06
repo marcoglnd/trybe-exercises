@@ -50,9 +50,20 @@ Criamos assim um *flex-container*. Elementos filhos de um *flex-container* são 
 O *layout* criado pelo Flexbox é disposto em dois eixos, chamados de *Flex Axes*. Eles são o *Main Axis* (ou eixo principal) e o *Cross Axis* (eixo transversal), e possuem direção definida pela propriedade `flex-direction`, que aceita os seguintes parâmetros:
 
 - `Row`: valor padrão, dispõe o *Main Axis* na horizontal e o *Cross Axis* na vertical;
+
+<img src="images/row.png" style="zoom:25%;" />
+
 - `Row-reverse`: disposição na horizontal, mas invertendo a ordem dos itens no *Main Axis*;
+
+<img src="images/row-reverse.png" style="zoom:25%;" />
+
 - `Column`: disposição dos *Main Axis* na vertical e do *Cross Axis* na horizontal;
+
+<img src="/Users/marcogalindo/Documents/TRYBE/trybe-exercises/summerjob/images/column.png" style="zoom:25%;" />
+
 - `Column-reverse`: disposição na vertical com inversão da ordem dos itens no *Main Axis*.
+
+<img src="/Users/marcogalindo/Documents/TRYBE/trybe-exercises/summerjob/images/column-reverse.png" style="zoom:25%;" />
 
 Outras propriedades importantes de um *layout* flexível são:
 
@@ -65,8 +76,15 @@ Outras propriedades importantes de um *layout* flexível são:
 
 Os *Flex Items* são agrupados em linhas denominadas *Flex Lines*, definidas pela propriedade `flex-wrap`. As *Flex Lines* podem ser:
 
-- *Single Line*: disposição padrão, na qual todos os itens ficam dispostos na mesma linha. Nesse caso, a propriedade `flex-wrap` é definida como `nowrap`;
+- *Single Line*: disposição padrão, na qual todos os itens ficam dispostos na mesma linha. Nesse caso, a propriedade `flex-wrap` é definida como `nowrap`, podendo ocorrer a compressão dos itens, conforme o exemplo abaixo;
+
+<img src="/Users/marcogalindo/Documents/TRYBE/trybe-exercises/summerjob/images/nowrap.png" style="zoom:25%;" />
+
 - *Multi Line*: os itens "quebram" a linha quando ultrapassam o tamanho máximo do *container*. Isso ocorre quando o `flex-wrap` é configurado como `wrap` ou `wrap-reverse` (nesse último, os itens são dispostos de maneira inversa).
+
+<img src="/Users/marcogalindo/Documents/TRYBE/trybe-exercises/summerjob/images/wrap.png" style="zoom:25%;" />
+
+<img src="/Users/marcogalindo/Documents/TRYBE/trybe-exercises/summerjob/images/wrap-reverse.png" style="zoom:25%;" />
 
 #### Flex Flow
 
@@ -81,33 +99,83 @@ flex-flow: column wrap-reverse;
 Aqui, você será capaz de ajustar o espaçamento entre os itens de um *container*, de acordo com a disposição do *Main Axis*. Essa propriedade pode receber os seguintes parâmetros:
 
 - `flex-start`: valor padrão, dispõe os itens no ínicio do *Main Axis*;
+
+<img src="images/justify-flex-start.png" style="zoom:25%;" />
+
 - `flex-end`: os itens ficam dispostos ao final do *Main Axis*;
+
+<img src="images/justify-flex-end.png" style="zoom:25%;" />
+
 - `center`: centraliza os itens no meio do eixo principal;
+
+<img src="images/justify-center.png" style="zoom:25%;" />
+
 - `space-between`: os itens são distribuídos igualmente ao longo do eixo, o primeiro se situando no começo e o último ao final;
+
+<img src="images/justify-space-between.png" style="zoom:25%;" />
+
 - `space-evenly`: determina que o espaço entre os itens e os limites do eixo, e entre os próprios itens são iguais;
+
+<img src="images/justify-space-evenly.png" style="zoom:25%;" />
+
 - `space-around`: determina o espaçamento de uma unidade de distância entre os itens e o limite do eixo, e de duas unidades entre os próprios itens.
+
+<img src="images/justify-space-around.png" style="zoom:25%;" />
 
 #### Align-Items
 
 Use essa propriedade quando quiser ajustar os itens com relação ao seu eixo transversal. Ela recebe os seguintes valores:
 
-- `stretch`: valor padrão, estica os itens para que cubram o *container* de acordo com o *Cross Axis*. 
 - `flex-start`: dispõe os itens no ínicio do *Cross Axis*;
+
+<img src="images/align-flex-start.png" style="zoom:25%;" />
+
 - `flex-end`: os itens ficam dispostos ao final do *Cross Axis*;
+
+<img src="images/align-flex-end.png" style="zoom:25%;" />
+
 - `center`: centraliza os itens de acordo com o eixo transversal;
-- `baseline`: alinha os itens de acordo com suas *baselines*.
+
+<img src="images/align-center.png" style="zoom:25%;" />
+
+- `baseline`: alinha os itens de acordo com suas *baselines*, ou seja, a linha base do conteúdo dentro deles.
+
+<img src="images/align-baseline.png" style="zoom:25%;" />
+
+- `stretch`: valor padrão, estica os itens para que cubram o *container* de acordo com o *Cross Axis*.
 
 #### Align-Content
 
-As linhas de um *container* podem ter seu espaçamento ajustado através desta propriedade, a qual recebe os parâmetros a seguir:
+O espaço ao redor dos itens de um *container* podem ser ajustado através desta propriedade, a qual recebe os parâmetros a seguir:
 
 - `normal`: valor inicial, onde as linhas estão organizadas na sua posição padrão;
+
+<img src="images/align-content-normal.png" style="zoom:25%;" />
+
 - `flex-start`: as linhas ficam dispostas no início do *container*;
+
+<img src="images/align-content-flex-start.png" style="zoom:25%;" />
+
 - `flex-end`: aqui, dispomos as linhas ao final do *container*;
+
+<img src="images/align-content-flex-end.png" style="zoom:25%;" />
+
 - `center`: posiciona as linhas no meio do *container*;
+
+<img src="images/align-content-center.png" style="zoom:25%;" />
+
 - `space-between`: o espaço entre as linhas é distribuído igualmente, a primeira linha ficando posicionada no começo do *container* e a última ao final;
+
+<img src="images/align-content-space-between.png" style="zoom:25%;" />
+
 - `space-evenly`: o espaçamento é o mesmo, tanto entre as linhas e o limite do *container*, quanto entre as próprias linhas;
+
+<img src="images/align-content-space-evenly.png" style="zoom:25%;" />
+
 - `space-around`: o espaçamento é de uma unidade entre as linhas e o limite do *container*, e de duas unidades entre as próprias linhas;
+
+<img src="images/align-content-space-around.png" style="zoom:25%;" />
+
 - `stretch`: alonga as linhas para que ocupem o espaço vazio disponível.
 
 ### Propriedades de um *flex-item*
@@ -116,23 +184,35 @@ Assim como o Flexbox consegue atribuir características flexíveis a um *contain
 
 #### Align-Self
 
-Essa propriedade alinha um determinado item de acordo com o eixo transversal da linha onde se encontra. Seu valor padrão é `auto`, situação onde herda o `align-items` definido para o *container* onde se encontra. Os outros valores são os mesmos usados para o `align-items` — `stretch`, `flex-start`, `flex-end`, `center` e `baseline`.
+Essa propriedade alinha um determinado item de acordo com o eixo transversal da linha onde se encontra. Seu valor padrão é `auto`, situação onde herda o `align-items` definido para o *container* onde se encontra. Os outros valores são os mesmos usados para o `align-items` — `stretch`, `flex-start`, `flex-end`, `center` e `baseline`. No exemplo abaixo, podemos ver a caixa número 2 alinhada ao final e ao centro do *container* através da propriedade `align-items`.
+
+<img src="images/align-self-flex-end.png" style="zoom:25%;" />
+
+<img src="images/align-self-center.png" style="zoom:25%;" />
 
 #### Order
 
-Permite ordenar itens dentro de um *container*. Por padrão, todos os itens recebem o valor 0 e são ordenados de acordo com sua marcação no HTML. O item que recebe o parâmetro 1 se situará ao final do *container*, enquanto o que recebe -1 se posiciona no início.
+Permite ordenar itens dentro de um *container*. Por padrão, todos os itens recebem o valor 0 e são ordenados de acordo com sua marcação no HTML. Por exemplo, o item que recebe o parâmetro 1 se situará ao final do *container*, enquanto o que recebe -1 se posiciona no início, tal qual a caixa 4 no exemplo abaixo.
+
+<img src="images/order.png" style="zoom:25%;" />
 
 #### Flex-Basis
 
-Define o tamanho base de um item no *container* antes do espaço restante ser distribuído, normalmente através de uma unidade de medida. Seu valor padrão é `auto`, ou seja, mantendo a flexibilidade do item. Já quando o valor é `content`, o item se ajusta ao tamanho do conteúdo que está dentro dele.
+Define o tamanho base de um item no *container* antes do espaço restante ser distribuído, normalmente através de uma unidade de medida. Seu valor padrão é `auto`, ou seja, mantendo a flexibilidade do item. Já quando o valor é `content`, o item se ajusta ao tamanho do conteúdo que está dentro dele. Na ilustração abaixo, a caixa 2 recebeu a propriedade `flex-basis` com valor de `300px`, por isso ficou maior com relação às demais.
+
+<img src="images/flex-basis.png" style="zoom:25%;" />
 
 #### Flex-Shrink
 
-Define o quanto um item será comprimido com relação aos demais, caso o *container* onde ele se encontra seja diminuído. Seu valor padrão é 1 e quanto maior, mais ele encolhe. 
+Define o quanto um item será comprimido com relação aos demais, caso o *container* onde ele se encontra seja diminuído. Seu valor padrão é 1 e quanto maior, mais ele encolhe, como a caixa 2 no exemplo abaixo.
+
+<img src="images/shrink.png" style="zoom:25%;" />
 
 #### Flex-Grow
 
-Define o quanto de espaço vago será ocupado por um item. Seu valor padrão é 0, e quanto maior, mais aquele determinado item aumentará com relação aos outros.
+Define o quanto de espaço vago será ocupado por um item. Seu valor padrão é 0, e quanto maior, mais aquele determinado item aumentará com relação aos outros, tal qual a caixa 2 no exemplo abaixo.
+
+<img src="images/grow.png" style="zoom:25%;" />
 
 #### Flex
 
@@ -815,12 +895,6 @@ body {
 #### Exercício 1
 
 ```
-
-```
-
-
-
-```
 * {
   margin: 0;
 }
@@ -1033,8 +1107,6 @@ body {
 </body>
 </html>
 ```
-
-
 
 ```
 * {
@@ -1261,13 +1333,21 @@ body {
 
 [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
+[Flexbox Froggy](https://flexboxfroggy.com/)
+
+[Flexbox Defense](http://www.flexboxdefense.com/)
+
+[Learn Flexbox](https://eneax.github.io/learn-flexbox/)
+
 [MDN Web Docs - Conceitos básicos de Flexbox](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
 [W3Schools - CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
 
-[Flexbox Froggy](https://flexboxfroggy.com/)
 
-[Flexbox Defense](http://www.flexboxdefense.com/)
+
+
+
+
 
 
 
