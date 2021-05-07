@@ -53,44 +53,80 @@
 
 // 4 - Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
 
+// const assert = require('assert');
+
+// const people = [
+//   {
+//     name: 'Nicole',
+//     bornIn: 1992,
+//     nationality: 'Australian',
+//   },
+//   {
+//     name: 'Harry',
+//     bornIn: 2008,
+//     nationality: 'Australian',
+//   },
+//   {
+//     name: 'Toby',
+//     bornIn: 1901,
+//     nationality: 'Australian',
+//   },
+//   {
+//     name: 'Frida',
+//     bornIn: 1960,
+//     nationality: 'Dannish',
+//   },
+//   {
+//     name: 'Fernando',
+//     bornIn: 2001,
+//     nationality: 'Brazilian',
+//   },
+// ];
+
+// // escreva filterPeople abaixo
+
+// const filterPeople = (people) => {
+//   const australianPeople = people.filter(({nationality}) => nationality === 'Australian');
+//   return australianPeople.filter(({bornIn}) => bornIn >= 1901 && bornIn <= 2000);
+// }
+
+// const filteredPeople = filterPeople(people);
+
+// assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
+// assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
+
+// 5 - Escreva a função swap , que dado um array de 3 elementos, retorna um novo array com o primeiro e terceiro elementos trocados. Detalhe: você precisa fazer essa função gastando 1 linha só:
+
+// const assert = require('assert');
+
+// const myList = [1, 2, 3];
+
+// function swap([n1, n2, n3]) {
+//   return [n3, n2, n1];
+// }
+
+// const swappedList = swap(myList);
+
+// assert.strictEqual(swappedList[0], 3);
+// assert.strictEqual(swappedList[1], 2);
+// assert.strictEqual(swappedList[2], 1);
+
+// 6 - Suponha que você esteja lidando com carros e, da forma como o problema lhe foi entregue, cada carro é modelado como um array. Porém, essa modelagem está baixo nível. Cria uma função toObject que, dada uma lista, retorna um objeto representando o carro:
+
 const assert = require('assert');
 
-const people = [
-  {
-    name: 'Nicole',
-    bornIn: 1992,
-    nationality: 'Australian',
-  },
-  {
-    name: 'Harry',
-    bornIn: 2008,
-    nationality: 'Australian',
-  },
-  {
-    name: 'Toby',
-    bornIn: 1901,
-    nationality: 'Australian',
-  },
-  {
-    name: 'Frida',
-    bornIn: 1960,
-    nationality: 'Dannish',
-  },
-  {
-    name: 'Fernando',
-    bornIn: 2001,
-    nationality: 'Brazilian',
-  },
-];
+const palio = ['Palio', 'Fiat', 2019];
+const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
+const chiron = ['Chiron', 'Bugatti', 2016];
 
-// escreva filterPeople abaixo
-
-const filterPeople = (people) => {
-  const australianPeople = people.filter(({nationality}) => nationality === 'Australian');
-  return australianPeople.filter(({bornIn}) => bornIn >= 1901 && bornIn <= 2000);
+function toObject([name, brand, year]) {
+  return {
+    name,
+    brand,
+    year,
+  }
 }
 
-const filteredPeople = filterPeople(people);
-
-assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
-assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
+assert.deepStrictEqual(toObject(palio), { name: 'Palio', brand: 'Fiat', year: 2019 });
+assert.deepStrictEqual(toObject(shelbyCobra), { name: 'Shelby Cobra', brand: 'Ford', year: 1963 });
+assert.deepStrictEqual(toObject(chiron), { name: 'Chiron', brand: 'Bugatti', year: 2016 });
